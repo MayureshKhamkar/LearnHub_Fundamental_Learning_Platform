@@ -68,7 +68,8 @@ To create a child-friendly, accessible web platform for teaching essential skill
 
 ## 📌 Project Info
 
-- **Project Title**: LearnHub – Fundamental Learning Platform  
+- **Project Title**: LearnHub – Fundamental Learning Platform
+- **Developed By**: Mayuresh Khamkar  
 - **Semester**: 5  
 - **Academic Year**: 2023–2024  
 - **University**: Savitribai Phule Pune University  
