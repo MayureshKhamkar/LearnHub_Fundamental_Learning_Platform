@@ -1,0 +1,150 @@
+body {
+    font-family: 'Comic Neue', cursive;
+    margin: 0;
+    display: flex;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Sidebar hidden off-screen initially */
+.sidebar-container {
+    width: 300px;
+    background-color: white;
+    border-right: 2px solid #d3d3d3;
+    height: 100vh;
+    position: fixed;
+    left: -300px; /* Hide it off the screen */
+    transition: left 0.3s ease; /* Smooth transition for the sidebar */
+    overflow-y: auto;
+}
+
+/* Sidebar visible when toggled */
+.sidebar-container.active {
+    left: 0; /* Sidebar slides into view */
+}
+
+.sidebar {
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    color: #6a0dad;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    border-radius: 0rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    padding: 18px;
+    border-radius: 2px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #f0f0f0;
+    color: #6a0dad;
+}
+
+/* Content area adjustment */
+.content-container {
+    margin-left: 48px; /* Initially small margin for hidden sidebar */
+    padding: 48px;
+    transition: margin-left 0.3s ease; /* Smooth transition for content shift */
+}
+
+.content-container.active {
+    margin-left: 320px; /* Content moves when sidebar is shown */
+}
+
+.content-box {
+    background-color: #ffffff;
+    border: 2px solid #6a0dad;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-box h2, .content-box h3 {
+    color: #6a0dad;
+}
+
+.go-back {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.go-back button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    background-color: #6a0dad;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.go-back button:hover {
+    background-color: #5a0a9d;
+}
+
+/* Toggle button (sidebar icon) */
+.toggle-sidebar {
+    position: absolute;
+    top: 20px;
+    left: 40px; /* Increased from 20px to 40px to create more space */
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+}
+
+.toggle-sidebar.active {
+    left: 340px; /* Adjust to match the new gap (increased from 320px to 340px) */
+}
+
+/* Video container */
+.video-container {
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+video {
+    width: 100%; /* Make sure the video takes up full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for consistency */
+}
